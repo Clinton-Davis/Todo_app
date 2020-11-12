@@ -5,13 +5,16 @@
 }
 
 body {
-  background-image: linear-gradient(120deg, #eec233, #f76e48);
+  background-image: url(/static/images/wolfgang-hasselmann-6q-Gsv6jurU-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
   color: aliceblue;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
 }
 header {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  font-family: "Goldman", sans-serif;
 }
 
 header,
@@ -22,20 +25,21 @@ form {
   align-items: center;
 }
 
-form input,
-form button {
+form input {
+  border: none;
   padding: 0.5rem;
   font-size: 1.75rem;
-  border: none;
   background: white;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 form button {
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.75rem;
   color: #f76e48;
   background: white;
   cursor: pointer;
@@ -44,6 +48,10 @@ form button {
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 form button:hover {
@@ -70,23 +78,40 @@ form button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .todo li {
   flex: 1;
 }
-.trash_btn,
+
 .complete_btn {
-  background: #ff6f47;
+  background: #eb0808;
   color: white;
   border: none;
   padding: 1rem;
   cursor: pointer;
   font-size: 1rem;
 }
+.trash_btn {
+  background: #eb0808;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
 
 .complete_btn {
-  background: #0fe00f;
+  background: #07a107;
 }
 .completed {
   text-decoration: line-through;
