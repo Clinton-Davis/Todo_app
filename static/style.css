@@ -86,6 +86,11 @@ form button:hover {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   box-shadow: 1px 20px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
 }
 
 .todo li {
@@ -108,6 +113,16 @@ form button:hover {
 }
 .completed {
   text-decoration: line-through;
+  opacity: 0.8;
+  background-color: #f1c0633f;
+}
+.fall {
+  transform: translateY(8rem) rotateZ(90deg);
+  -webkit-transform: translateY(8rem) rotateZ(90deg);
+  -moz-transform: translateY(8rem) rotateZ(90deg);
+  -ms-transform: translateY(8rem) rotateZ(90deg);
+  -o-transform: translateY(8rem) rotateZ(90deg);
+  opacity: 0;
 }
 .trash_btn {
   background: #eb0808;
@@ -130,4 +145,52 @@ form button:hover {
 .fa-trash,
 .fa-check {
   pointer-events: none;
+}
+
+select {
+  -web-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: #f76e48;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background-color: #f76e48;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background-color: white;
+  color: #f76e48;
 }
